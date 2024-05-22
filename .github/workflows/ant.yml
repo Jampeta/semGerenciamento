@@ -22,4 +22,10 @@ jobs:
         java-version: '19'
         distribution: 'temurin'
     - name: Build with Ant
-      run: ant -noinput -buildfile build.xml
+      run: javac src/Main.java -d out
+      
+    - name: Rodando o java
+      run: java -cp out Main
+
+    - name: Mensagem de acerto
+      run: echo Feliz avenue inglish please
